@@ -115,3 +115,40 @@ main {
 .invoice-list span {
   color: #918e9b;
 }
+
+.invoice-line {
+  width: 471px;
+  border: 1px solid #c3c6db;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+}
+
+.invoice-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 35px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #f5f5f5;
+}
+
+.notes p:first-child,
+.total p {
+  color: #d5d4d8;
+}
+
+.notes p:last-child,
+.total h3 {
+  margin-top: 10px;
+}
+
+.note-value {
+  font-weight: 400;
+}
+
+.price-value {
+  font-weight: 600;
+  font-size: 36px;
+}
