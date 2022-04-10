@@ -4,6 +4,10 @@ const serviceThree = document.querySelector(".service-3");
 
 const invoiceListContainer = document.querySelector(".invoice-list-container");
 
+const priceValue = document.querySelector(".price-value");
+
+const orders = [];
+
 const washCar = {
   title: "Wash Car",
   price: "10",
@@ -61,5 +65,25 @@ function addToCard(service) {
   invoiceList.appendChild(invoiceName);
   invoiceList.appendChild(invoicePrice);
 
-  invoiceListContainer.appendChild(invoiceList);
+  if (orders.length === 0) {
+    orders.push(service);
+    invoiceListContainer.appendChild(invoiceList);
+    console.log("ZERO");
+  }
+
+  let repeat = "no";
+
+  for (let i = 0; i < orders.length; i++) {
+    if (orders[i].title === service.title) {
+      repeat = "yes";
+    }
+  }
+  console.log(orders);
+
+  if (repeat === "no") {
+    orders.push(service);
+    invoiceListContainer.appendChild(invoiceList);
+  } else {
+    repeat = "no";
+  }
 }
